@@ -2,13 +2,13 @@ import { initializeApp } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBhABm6H15CioadCebAoS3N6QN_a4mysSY",
-  authDomain: "sgo-sdk.firebaseapp.com",
-  databaseURL: "https://sgo-sdk-default-rtdb.firebaseio.com",
-  projectId: "sgo-sdk",
-  storageBucket: "sgo-sdk.firebasestorage.app",
-  messagingSenderId: "20143007303",
-  appId: "1:20143007303:web:d9c8374478dba21f86f362"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  databaseURL: import.meta.env.VITE_FIREBASE_DATABASE_URL,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID
 };
 
 const app = initializeApp(firebaseConfig);
